@@ -2,8 +2,10 @@ use ::std::cmp::Ordering;
 use rand::Rng;
 use std::io;
 mod  varials_in_rs;
+mod ownership_in_rust;
 
 use varials_in_rs::variables_in_rust;
+use ownership_in_rust::ownership_rs_tuto;
 
 
 
@@ -58,4 +60,7 @@ fn main() {
    
      println!("============ Variables In Rust ==============");
      variables_in_rust();
+     println!("============ OwnerShip In Rust ==============");
+     ownership_rs_tuto();
+
 }
