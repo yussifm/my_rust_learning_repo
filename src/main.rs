@@ -3,9 +3,11 @@ use rand::Rng;
 use std::io;
 mod  varials_in_rs;
 mod ownership_in_rust;
+mod structures_in_rust;
 
 use varials_in_rs::variables_in_rust;
 use ownership_in_rust::ownership_rs_tuto;
+use  structures_in_rust::structures_in_rust;
 
 
 
@@ -62,5 +64,7 @@ fn main() {
      variables_in_rust();
      println!("============ OwnerShip In Rust ==============");
      ownership_rs_tuto();
+     println!("============ Struct / Structures In Rust ==============");
+     structures_in_rust();
 
 }

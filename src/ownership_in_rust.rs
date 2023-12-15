@@ -4,9 +4,12 @@ pub fn ownership_rs_tuto(){
 
     s.push_str(", World");
 
+
+    let s2 = s;
+
     
 
     // let s2 = s.clone();
 
-    println!("{}", s);
+    println!("{}", s2);
 } 
