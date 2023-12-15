@@ -15,8 +15,8 @@ pub fn structures_in_rust() {
         sign_in_counts: 1,
     };
 
-    print!("{}", user_1.username);
-    print!("{}", user_1.active);
-    print!("{}", user_1.email);
-    print!("{}", user_1.sign_in_counts);
+    println!("User Name: {}", user_1.username);
+    println!("Is User active: {}", user_1.active);
+    println!("User Email: {}", user_1.email);
+    println!("Number of signs in: {}", user_1.sign_in_counts);
 }
