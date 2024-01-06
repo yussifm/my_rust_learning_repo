@@ -1,15 +1,13 @@
 pub fn ownership_rs_tuto(){
 
-    let mut s = String::from("Hello");
 
-    s.push_str(", World");
+    // Variable Scope
+    let s = "Hello";
 
 
-    let s2 = s;
+    {  // s is not declare here and not available
+        let s = "Coded"; // s is declare here and available
 
-    
+    } // this scope is now over, and s is no longer valid
 
-    // let s2 = s.clone();
-
-    println!("{}", s2);
 } 
