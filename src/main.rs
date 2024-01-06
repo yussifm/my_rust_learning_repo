@@ -9,7 +9,10 @@ use varials_in_rs::variables_in_rust;
 use ownership_in_rust::ownership_rs_tuto;
 use  structures_in_rust::structures_in_rust;
 
+mod area_of_circle;
 
+
+use area_of_circle::area;
 
 fn main() {
     println!("Guess the number!");
@@ -66,5 +69,9 @@ fn main() {
      ownership_rs_tuto();
      println!("============ Struct / Structures In Rust ==============");
      structures_in_rust();
+     println!("============ Area of a circle program In Rust ==============");
+     let area_circle =  area(20, 12);
+     println!("Area of circle: {}", area_circle);
+
 
 }
