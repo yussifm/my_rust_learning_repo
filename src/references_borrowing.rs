@@ -13,6 +13,10 @@ pub fn references_main_func() {
     println!("The length of {} String is, {}", s, len);
 
     // Mutables References
+
+    // Mutable references have one big restriction: if you have a mutable reference to a value, you
+    // can have no other references to that value.
+
     let mut s1 = String::from("Hello");
     let mStr = change_reference(&mut s1);
     println!("mutate String, {}", mStr);
