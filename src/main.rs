@@ -1,16 +1,17 @@
 use ::std::cmp::Ordering;
 use rand::Rng;
 use std::io;
-mod  varials_in_rs;
 mod ownership_in_rust;
+mod references_borrowing;
 mod structures_in_rust;
+mod varials_in_rs;
 
-use varials_in_rs::variables_in_rust;
 use ownership_in_rust::ownership_rs_tuto;
-use  structures_in_rust::structures_in_rust;
+use references_borrowing::references_main_func;
+use structures_in_rust::structures_in_rust;
+use varials_in_rs::variables_in_rust;
 
 mod area_of_circle;
-
 
 use area_of_circle::area;
 
@@ -19,10 +20,9 @@ fn main() {
 
     let mut secret_number = rand::thread_rng().gen_range(1..=100);
 
-
     loop {
         println!("Please input your guess.");
-         println!("The secret number is: {secret_number}\n");
+        println!("The secret number is: {secret_number}\n");
 
         let mut guess = String::new();
 
@@ -51,7 +51,6 @@ fn main() {
                 if opt.to_lowercase().trim() == "c" {
                     secret_number = rand::thread_rng().gen_range(1..=100);
                     continue;
-                   
                 } else {
                     break;
                 }
@@ -62,16 +61,15 @@ fn main() {
         }
     }
 
-   
-     println!("============ Variables In Rust ==============");
-     variables_in_rust();
-     println!("============ OwnerShip In Rust ==============");
-     ownership_rs_tuto();
-     println!("============ Struct / Structures In Rust ==============");
-     structures_in_rust();
-     println!("============ Area of a circle program In Rust ==============");
-     let area_circle =  area(20, 12);
-     println!("Area of circle: {}", area_circle);
-
-
+    println!("============ Variables In Rust ==============");
+    variables_in_rust();
+    println!("============ OwnerShip In Rust ==============");
+    ownership_rs_tuto();
+    println!("============ References and Borrowing In Rust ==============");
+    references_main_func();
+    println!("============ Struct / Structures In Rust ==============");
+    structures_in_rust();
+    println!("============ Area of a circle program In Rust ==============");
+    let area_circle = area(20, 12);
+    println!("Area of circle: {}", area_circle);
 }
