@@ -28,6 +28,10 @@ pub fn references_main_func() {
     //guarantees that references will never be dangling references: if you have a reference to some
     //data, the compiler will ensure that the data will not go out of scope before the reference to the
     //data does.
+
+
+    // The Slice Type
+
 }
 fn calculate_length(s: &String) -> usize {
     s.len()
