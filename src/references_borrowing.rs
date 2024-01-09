@@ -31,6 +31,12 @@ pub fn references_main_func() {
 
 
     // The Slice Type
+   // String Slice 
+
+   let s_str = String::from("Hello, world!");
+
+   let sl = &s_str[0..4];
+   println!("String slice from {} : {}", s_str, sl);
 
 }
 fn calculate_length(s: &String) -> usize {
