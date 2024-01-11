@@ -53,3 +53,6 @@ impl RectangleM {
     self.width * self.height
 }
 }
+
+
+// Associated Functions
