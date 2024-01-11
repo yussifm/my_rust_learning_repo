@@ -15,7 +15,7 @@ mod area_of_circle;
 
 use area_of_circle::area;
 
-use crate::area_of_circle::{area_with_tuple, area_with_struct, Rectangle};
+use crate::area_of_circle::{area_with_tuple, area_with_struct, Rectangle, RectangleM};
 
 fn main() {
     println!("Guess the number!");
@@ -98,6 +98,13 @@ fn main() {
      let area_circle_struct = area_with_struct(&react1);
     println!("Area of circle: {}", area_circle_struct);
     println!("===================================================");
+    println!("===================================================");
+    println!("======================= Methods in Rust ============================");
+     let react2 = RectangleM {
+        width: 30,  height: 70,
+      };
+    let res_area = react2.area();
+      println!("Area of circle: {}", res_area);
     println!("===================================================");
     println!("===================================================");
 
