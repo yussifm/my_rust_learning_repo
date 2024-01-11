@@ -15,6 +15,8 @@ mod area_of_circle;
 
 use area_of_circle::area;
 
+use crate::area_of_circle::{area_with_tuple, area_with_struct, Rectangle};
+
 fn main() {
     println!("Guess the number!");
 
@@ -62,14 +64,42 @@ fn main() {
     }
 
     println!("============ Variables In Rust ==============");
+    println!("===================================================");
     variables_in_rust();
+    println!("===================================================");
+    println!("===================================================");
     println!("============ OwnerShip In Rust ==============");
     ownership_rs_tuto();
+    println!("===================================================");
+    println!("===================================================");
     println!("============ References and Borrowing In Rust ==============");
     references_main_func();
+    println!("===================================================");
+    println!("===================================================");
     println!("============ Struct / Structures In Rust ==============");
     structures_in_rust();
+    println!("===================================================");
+    println!("===================================================");
     println!("============ Area of a circle program In Rust ==============");
     let area_circle = area(20, 12);
     println!("Area of circle: {}", area_circle);
+    println!("===================================================");
+    println!("===================================================");
+    println!("============ Area of a circle with tuple In Rust ==============");
+    let area_circle_tuple = area_with_tuple((50, 20));
+    println!("Area of circle: {}", area_circle_tuple);
+    println!("===================================================");
+    println!("===================================================");
+
+    println!("============ Ownership of Struct Data In Rust ==============");
+      let react1 = Rectangle {
+        width: 100,  height: 200,
+      };
+     let area_circle_struct = area_with_struct(&react1);
+    println!("Area of circle: {}", area_circle_struct);
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+
+
 }
