@@ -1,0 +1,2 @@
+
+// Enums in rust
