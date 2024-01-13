@@ -78,6 +78,18 @@ pub fn enums_exam() {
     let five = Some(5);
     let six = plus_one(five);
     let none = plus_one(None);
+
+    // === If let
+
+    //     let mut count = 0;
+    // if let Coin::Quarter(state) = coin {
+    // println!("State quarter from {:?}!", state);
+    // } else {
+    // count += 1;
+    // }
+
+
+    
 }
 
 fn route(ip_kind: &IpAddressKind) -> &IpAddressKind {
