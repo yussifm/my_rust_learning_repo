@@ -1,11 +1,11 @@
 use ::std::cmp::Ordering;
 use rand::Rng;
 use std::io;
+mod enums_in_rust;
 mod ownership_in_rust;
 mod references_borrowing;
 mod structures_in_rust;
 mod varials_in_rs;
-mod enums_in_rust;
 
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
@@ -16,7 +16,7 @@ mod area_of_circle;
 
 use area_of_circle::area;
 
-use crate::area_of_circle::{area_with_tuple, area_with_struct, Rectangle, RectangleM};
+use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, RectangleM};
 
 fn main() {
     println!("Guess the number!");
@@ -64,6 +64,8 @@ fn main() {
         }
     }
 
+ 
+
     println!("============ Variables In Rust ==============");
     println!("===================================================");
     variables_in_rust();
@@ -93,25 +95,25 @@ fn main() {
     println!("===================================================");
 
     println!("============ Ownership of Struct Data In Rust ==============");
-      let react1 = Rectangle {
-        width: 100,  height: 200,
-      };
-     let area_circle_struct = area_with_struct(&react1);
+    let react1 = Rectangle {
+        width: 100,
+        height: 200,
+    };
+    let area_circle_struct = area_with_struct(&react1);
     println!("Area of circle: {}", area_circle_struct);
     println!("===================================================");
     println!("===================================================");
     println!("======================= Methods in Rust ============================");
-     let react2 = RectangleM {
-        width: 30,  height: 70,
-      };
+    let react2 = RectangleM {
+        width: 30,
+        height: 70,
+    };
     let res_area = react2.area();
-      println!("Area of circle: {}", res_area);
+    println!("Area of circle: {}", res_area);
     println!("===================================================");
     println!("===================================================");
     println!("====================== Enums in Rust =============================");
-       enums_in_rust::enums_exam();
+    enums_in_rust::enums_exam();
     println!("===================================================");
     println!("===================================================");
-
-
 }
