@@ -32,8 +32,8 @@ pub enum Message {
 //just as we’re able to defi ne methods
 //on structs using impl , we’re also able to defi ne methods on enums
 
-impl  Message {
-    fn call(&self){}
+impl Message {
+    fn call(&self) {}
 }
 
 pub fn enums_exam() {
@@ -41,10 +41,13 @@ pub fn enums_exam() {
     let home: IpAddressKind = IpAddressKind::V4(String::from("127.0.0.1"));
     let loopback: IpAddressKind = IpAddressKind::V6(String::from("::01"));
 
+    let x: i8 = 5;
+    let y: Option<i8> = Some(5);
+
     println!("===== V4: {:?} === V6: {:?} ==", &home, &loopback);
 
     // ==========
-    
+
     let m = Message::Speak(String::from("HI! Hello"));
     m.call();
 }
