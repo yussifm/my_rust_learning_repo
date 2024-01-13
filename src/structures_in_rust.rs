@@ -5,7 +5,15 @@ struct User {
     email: String,
     sign_in_counts: u64,
 }
-struct  AlwaysEqual;
+struct AlwaysEqual;
+
+struct QuitMessage; // unit struct
+struct MoveMessage {
+    x: i32,
+    y: i32,
+}
+struct WriteMessage(String); // tuple struct
+struct ChangeColorMessage(i32, i32, i32); // tuple struct
 
 // Tuple struct
 struct Color(i32, i32, i32);
@@ -28,8 +36,6 @@ pub fn structures_in_rust() {
     //need to implement a trait on some type but
     // don't have any data that you want to store in the type itself.
     let subject = AlwaysEqual;
-
-
 
     println!("======== Normal Struct ==========",);
     println!("User Name: {}", user_1.username);

@@ -5,6 +5,7 @@ mod ownership_in_rust;
 mod references_borrowing;
 mod structures_in_rust;
 mod varials_in_rs;
+mod enums_in_rust;
 
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
@@ -105,6 +106,10 @@ fn main() {
       };
     let res_area = react2.area();
       println!("Area of circle: {}", res_area);
+    println!("===================================================");
+    println!("===================================================");
+    println!("====================== Enums in Rust =============================");
+       enums_in_rust::enums_exam();
     println!("===================================================");
     println!("===================================================");
 
