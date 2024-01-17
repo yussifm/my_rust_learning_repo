@@ -6,6 +6,7 @@ mod ownership_in_rust;
 mod references_borrowing;
 mod structures_in_rust;
 mod varials_in_rs;
+mod common_collections_rs;
 
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
@@ -15,6 +16,7 @@ use varials_in_rs::variables_in_rust;
 mod area_of_circle;
 
 use area_of_circle::area;
+use common_collections_rs::common_collections_in_rs;
 
 use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, RectangleM};
 
@@ -114,6 +116,14 @@ fn main() {
     println!("===================================================");
     println!("====================== Enums in Rust =============================");
     enums_in_rust::enums_exam();
+    println!("===================================================");
+    println!("===================================================");
+
+    println!("======================= Common Collections in Rust============================");
+    println!("===================================================");
+    println!("===================================================");
+      common_collections_in_rs();
+
     println!("===================================================");
     println!("===================================================");
 }
