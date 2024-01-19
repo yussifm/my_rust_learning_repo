@@ -8,7 +8,7 @@ pub fn common_collections_in_rs() {
     strings_collections_in_rs();
 
     // Hash Maps
-    hashMaps_collections_in_rs();
+    hashmaps_collections_in_rs();
 }
 
 fn vectors_collections() {
@@ -161,4 +161,10 @@ fn hashmaps_collections_in_rs() {
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
+
+    // Accessing Values in a Hash Map
+    let team_name = String::from("Blue");
+    let score = scores.get(&team_name).copied().unwrap_or(0);
+
+    println!("{}", score);
 }
