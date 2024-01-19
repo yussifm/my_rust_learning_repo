@@ -154,7 +154,7 @@ fn strings_collections_in_rs() {
     }
 }
 
-fn hashMaps_collections_in_rs() {
+fn hashmaps_collections_in_rs() {
     //  Storing Keys with Associated Values in Hash Maps
 
     // Creating a new Hash Map
