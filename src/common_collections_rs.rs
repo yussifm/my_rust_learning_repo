@@ -1,9 +1,14 @@
+use std::collections::HashMap;
+
 pub fn common_collections_in_rs() {
     // Vectors
     vectors_collections();
 
     // String collections
     strings_collections_in_rs();
+
+    // Hash Maps
+    hashMaps_collections_in_rs();
 }
 
 fn vectors_collections() {
@@ -127,27 +132,33 @@ fn strings_collections_in_rs() {
     // Rust strings don't support indexing.
     //    let h = s10[0];
 
-
     // Bytes and Scalar Values and Grapheme Clusters
 
-    // Another point about UTF-8 is that there are actually 
+    // Another point about UTF-8 is that there are actually
     // three relevant ways to look at strings from
-//Rust’s perspective: as bytes, scalar values, and grapheme clusters
-// (the closest thing to what we would call letters).
+    //Rust’s perspective: as bytes, scalar values, and grapheme clusters
+    // (the closest thing to what we would call letters).
 
-// String slice 
+    // String slice
 
-let hello = "Здравствуйте";
-let s11 = &hello[0..4];
+    let hello = "Здравствуйте";
+    let s11 = &hello[0..4];
 
+    // Methods for Iterating Over Strings
+    for c in "Hello World".chars() {
+        println!("{c}");
+    }
 
-// Methods for Iterating Over Strings
-for c in "Hello World".chars() {
-println!("{c}");
+    for b in "السالم".bytes() {
+        println!("{b}");
+    }
 }
 
-for b in "السالم".bytes() {
-println!("{b}");
-}
+fn hashMaps_collections_in_rs() {
+    //  Storing Keys with Associated Values in Hash Maps
 
+    // Creating a new Hash Map
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
 }
