@@ -9,6 +9,10 @@ pub fn common_collections_in_rs() {
 
     // Hash Maps
     hashmaps_collections_in_rs();
+
+
+    // Exercise 
+    exercise_in_collections();
 }
 
 fn vectors_collections() {
@@ -192,7 +196,71 @@ fn hashmaps_collections_in_rs() {
     scores.entry(String::from("Blue")).or_insert(50);
     println!("{:?}", scores);
 
+    // - Updating a Value Based on the old Value.
+    let text = "hello world wonderful world";
+    let mut map = HashMap::new();
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+    println!("{:?}", map);
+}
+
+fn exercise_in_collections() {
+
+    // Given a list of integers, use a vector and return the median
+    // (when sorted, the value in the middle position) and mode
+    // (the value that occurs most often; a hash map will be helpful
+    // here) of the list.
 
 
-    
+     // Sample list of integers
+    let numbers = vec![4, 6, 2, 8, 3, 6, 9, 4, 5, 7, 3];
+
+    // Calculate and print the median
+    let median = calculate_median(&numbers);
+    println!("Median: {}", median);
+
+    // Calculate and print the mode
+    let mode = calculate_mode(&numbers);
+    println!("Mode: {}", mode);
+}
+
+fn calculate_median(numbers: &Vec<i32>) -> f64 {
+    let mut sorted_numbers = numbers.clone();
+    sorted_numbers.sort();
+
+    let len = sorted_numbers.len();
+    if len % 2 == 0 {
+        // If the length is even, calculate the average of the middle two values
+        let middle_left = sorted_numbers[len / 2 - 1];
+        let middle_right = sorted_numbers[len / 2];
+        return (middle_left + middle_right) as f64 / 2.0;
+    } else {
+        // If the length is odd, return the middle value
+        return sorted_numbers[len / 2] as f64;
+    }
+}
+
+fn calculate_mode(numbers: &Vec<i32>) -> i32 {
+    let mut occurrences = HashMap::new();
+
+    // Count occurrences of each number
+    for &number in numbers.iter() {
+        let count = occurrences.entry(number).or_insert(0);
+        *count += 1;
+    }
+
+    // Find the number with the maximum occurrences (mode)
+    let mut mode = 0;
+    let mut max_occurrences = 0;
+
+    for (&number, &count) in occurrences.iter() {
+        if count > max_occurrences {
+            max_occurrences = count;
+            mode = number;
+        }
+    }
+
+    mode // Return the calculated mode value
 }
