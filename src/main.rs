@@ -1,19 +1,20 @@
 use ::std::cmp::Ordering;
 use rand::Rng;
 use std::io;
+mod area_of_circle;
+mod common_collections_rs;
 mod enums_in_rust;
+mod handling_errors_in_rs;
 mod ownership_in_rust;
 mod references_borrowing;
 mod structures_in_rust;
 mod varials_in_rs;
-mod common_collections_rs;
 
+use handling_errors_in_rs::handling_errors_in_rs;
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
 use structures_in_rust::structures_in_rust;
 use varials_in_rs::variables_in_rust;
-
-mod area_of_circle;
 
 use area_of_circle::area;
 use common_collections_rs::common_collections_in_rs;
@@ -65,8 +66,6 @@ fn main() {
             }
         }
     }
-
- 
 
     println!("============ Variables In Rust ==============");
     println!("===================================================");
@@ -122,8 +121,18 @@ fn main() {
     println!("======================= Common Collections in Rust============================");
     println!("===================================================");
     println!("===================================================");
-      common_collections_in_rs();
+    common_collections_in_rs();
 
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("=========================== Error handling in Rust ========================");
+
+    println!("===================================================");
+    handling_errors_in_rs();
+
+    println!("===================================================");
     println!("===================================================");
     println!("===================================================");
 }
