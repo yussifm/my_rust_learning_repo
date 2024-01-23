@@ -4,6 +4,7 @@ use std::io;
 mod area_of_circle;
 mod common_collections_rs;
 mod enums_in_rust;
+mod generics_traaits_in_rs;
 mod handling_errors_in_rs;
 mod ownership_in_rust;
 mod references_borrowing;
@@ -20,6 +21,7 @@ use area_of_circle::area;
 use common_collections_rs::common_collections_in_rs;
 
 use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, RectangleM};
+use generics_traaits_in_rs::generics_and_traits_in_rs;
 
 fn main() {
     println!("Guess the number!");
@@ -132,6 +134,14 @@ fn main() {
     println!("===================================================");
     handling_errors_in_rs();
 
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("============= Generic Types, Traits, and Lifetimes =================");
+
+    println!("===================================================");
+    generics_and_traits_in_rs();
     println!("===================================================");
     println!("===================================================");
     println!("===================================================");
