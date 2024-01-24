@@ -9,12 +9,14 @@ mod handling_errors_in_rs;
 mod ownership_in_rust;
 mod references_borrowing;
 mod structures_in_rust;
+mod traits_in_rs;
 mod varials_in_rs;
 
 use handling_errors_in_rs::handling_errors_in_rs;
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
 use structures_in_rust::structures_in_rust;
+use traits_in_rs::traits_in_rs;
 use varials_in_rs::variables_in_rust;
 
 use area_of_circle::area;
@@ -142,6 +144,13 @@ fn main() {
 
     println!("===================================================");
     generics_and_traits_in_rs();
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("====================== Traits in Rust  ===================");
+
+    println!("===================================================");
+    traits_in_rs();
     println!("===================================================");
     println!("===================================================");
     println!("===================================================");
