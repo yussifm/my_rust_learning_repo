@@ -11,6 +11,7 @@ mod references_borrowing;
 mod structures_in_rust;
 mod traits_in_rs;
 mod varials_in_rs;
+mod closures_in_rs;
 
 use handling_errors_in_rs::handling_errors_in_rs;
 use ownership_in_rust::ownership_rs_tuto;
@@ -18,6 +19,7 @@ use references_borrowing::references_main_func;
 use structures_in_rust::structures_in_rust;
 use traits_in_rs::traits_in_rs;
 use varials_in_rs::variables_in_rust;
+use closures_in_rs::closures_in_rs;
 
 use area_of_circle::area;
 use common_collections_rs::common_collections_in_rs;
@@ -147,7 +149,8 @@ fn main() {
     println!("===================================================");
     println!("===================================================");
     println!("===================================================");
-    println!("====================== Traits in Rust  ===================");
+    println!("====================== Closure in Rust  ===================");
+    closures_in_rs();
 
     println!("===================================================");
     traits_in_rs();
