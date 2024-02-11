@@ -1,8 +1,25 @@
+use std::cell::RefCell;
 use std::ops::Deref;
+use std::rc::{Rc, Weak};
 
 pub fn smart_pointers() {
     // Boxes
     boxes_in_rs();
+
+    // # Creating a Tree Data Structure: a Node with Child Nodes
+    let leaf = Rc::new(Node {
+        value: 3,
+        parent: RefCell::new(Weak::new()),
+        children: RefCell::new(vec![]),
+    });
+    println!("leaf parent =",);
+    let branch = Rc::new(Node {
+        value: 5,
+        parent: RefCell::new(Weak::new()),
+        children: RefCell::new(vec![Rc::clone(&leaf)]),
+    });
+    *leaf.parent.borrow_mut() = Rc::downgrade(&branch);
+    println!("leaf parent = ",);
 }
 
 // Boxes
@@ -44,8 +61,6 @@ fn boxes_in_rs() {
     );
 }
 
-
-
 // #Defining Our Own Smart Pointer
 
 struct MyBox<T>(T);
@@ -54,7 +69,6 @@ impl<T> MyBox<T> {
     fn new(x: T) -> MyBox<T> {
         MyBox(x)
     }
-    
 }
 
 // #Treating a Type Like a Reference by Implementing the Deref Trait
@@ -64,4 +78,12 @@ impl<T> Deref for MyBox<T> {
     fn deref(&self) -> &Self::Target {
         &self.0
     }
+}
+
+//Creating a Tree Data Structure: a Node with Child Nodes
+#[derive(Debug)]
+struct Node {
+    value: i32,
+    parent: RefCell<Weak<Node>>,
+    children: RefCell<Vec<Rc<Node>>>,
 }
