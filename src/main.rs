@@ -2,31 +2,33 @@ use ::std::cmp::Ordering;
 use rand::Rng;
 use std::io;
 mod area_of_circle;
+mod closures_in_rs;
 mod common_collections_rs;
+mod concurrency_in_rs;
 mod enums_in_rust;
 mod generics_traaits_in_rs;
 mod handling_errors_in_rs;
 mod ownership_in_rust;
 mod references_borrowing;
+mod smart_pointers_in_rs;
 mod structures_in_rust;
 mod traits_in_rs;
 mod varials_in_rs;
-mod closures_in_rs;
-mod smart_pointers_in_rs;
 
+use closures_in_rs::closures_in_rs;
 use handling_errors_in_rs::handling_errors_in_rs;
 use ownership_in_rust::ownership_rs_tuto;
 use references_borrowing::references_main_func;
+use smart_pointers_in_rs::smart_pointers;
 use structures_in_rust::structures_in_rust;
 use traits_in_rs::traits_in_rs;
 use varials_in_rs::variables_in_rust;
-use closures_in_rs::closures_in_rs;
-use smart_pointers_in_rs::smart_pointers;
 
 use area_of_circle::area;
 use common_collections_rs::common_collections_in_rs;
 
 use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, RectangleM};
+use concurrency_in_rs::all_concurrency_exam;
 use generics_traaits_in_rs::generics_and_traits_in_rs;
 
 fn main() {
@@ -163,7 +165,15 @@ fn main() {
     println!("===================================================");
     println!("===================================================");
     println!("====================== Smart Pointer in Rust  ===================");
-   smart_pointers();
+    smart_pointers();
+
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("===================================================");
+    println!("====================== ConCurrency in Rust  ===================");
+    all_concurrency_exam();
 
     println!("===================================================");
     println!("===================================================");
