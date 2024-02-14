@@ -39,6 +39,36 @@ pub fn all_concurrency_exam() {
 }
 
 // Using Message Passing to Transfer Data Between Threads
-fn messages_passing_trn() {
+pub fn messages_passing_trn() {
     let (tx, rx) = mpsc::channel();
+
+    thread::spawn(move || {
+        println!("Sending message");
+        let val = String::from("Hi Coded");
+        tx.send(val).unwrap();
+    });
+
+    let receive = rx.recv().unwrap();
+    println!("Got: {}", receive);
+}
+
+// Sending Multiple Values and Seeing the Receiver Waiting
+pub fn multiple_messages_tr() {
+    let (tx, rx) = mpsc::channel();
+
+    thread::spawn(move || {
+        println!("Sending message");
+        let vals = vec![
+            String::from("Hi Coded 1"),
+            String::from("Hi Coded 2"),
+            String::from("Hi Coded 3"),
+        ];
+        for val in vals {
+            tx.send(val).unwrap();
+            thread::sleep(Duration::from_secs(1));
+        }
+    });
+    for receive in rx {
+        println!("Got: {}", receive);
+    }
 }

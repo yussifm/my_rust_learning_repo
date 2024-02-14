@@ -28,6 +28,7 @@ use area_of_circle::area;
 use common_collections_rs::common_collections_in_rs;
 
 use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, RectangleM};
+use crate::concurrency_in_rs::{messages_passing_trn, multiple_messages_tr};
 use concurrency_in_rs::all_concurrency_exam;
 use generics_traaits_in_rs::generics_and_traits_in_rs;
 
@@ -174,6 +175,8 @@ fn main() {
     println!("===================================================");
     println!("====================== ConCurrency in Rust  ===================");
     all_concurrency_exam();
+    messages_passing_trn();
+    multiple_messages_tr();
 
     println!("===================================================");
     println!("===================================================");
