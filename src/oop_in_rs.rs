@@ -2,13 +2,13 @@ pub fn object_orient_program_rs() {}
 
 // Public
 pub struct AverageOfNumber {
-    pub list_Of_number: Vec<i32>,
+    pub list_of_number: Vec<i32>,
     pub average: f64,
 }
 
 impl AverageOfNumber {
     pub fn add_numbers(&mut self, value: i32) {
-        self.list_Of_number.push(value);
+        self.list_of_number.push(value);
         self.calculate_average();
     }
 
@@ -17,7 +17,7 @@ impl AverageOfNumber {
     }
 
     pub fn calculate_average(&mut self) {
-        let total = self.list_Of_number.iter().sum();
-        self.average = total as f64 / self.list_Of_number.len() as f64;
+        let total = self.list_of_number.iter().sum();
+        self.average = total as f64 / self.list_of_number.len() as f64;
     }
 }
