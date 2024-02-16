@@ -8,6 +8,7 @@ mod concurrency_in_rs;
 mod enums_in_rust;
 mod generics_traaits_in_rs;
 mod handling_errors_in_rs;
+mod oop_in_rs;
 mod ownership_in_rust;
 mod references_borrowing;
 mod smart_pointers_in_rs;
