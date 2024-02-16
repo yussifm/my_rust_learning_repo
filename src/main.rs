@@ -32,6 +32,7 @@ use crate::area_of_circle::{area_with_struct, area_with_tuple, Rectangle, Rectan
 use crate::concurrency_in_rs::{messages_passing_trn, multiple_messages_tr};
 use concurrency_in_rs::all_concurrency_exam;
 use generics_traaits_in_rs::generics_and_traits_in_rs;
+use oop_in_rs::object_orient_program_rs;
 
 fn main() {
     println!("Guess the number!");
@@ -179,6 +180,11 @@ fn main() {
     messages_passing_trn();
     multiple_messages_tr();
 
+    println!("===================================================");
+    println!("===================================================");
+    println!("==================== OOP in rust ===================");
+    println!("===================================================");
+    object_orient_program_rs();
     println!("===================================================");
     println!("===================================================");
     println!("===================================================");
