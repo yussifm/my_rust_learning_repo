@@ -15,6 +15,7 @@ mod smart_pointers_in_rs;
 mod structures_in_rust;
 mod traits_in_rs;
 mod varials_in_rs;
+mod unsafe_rs;
 
 use closures_in_rs::closures_in_rs;
 use handling_errors_in_rs::handling_errors_in_rs;
